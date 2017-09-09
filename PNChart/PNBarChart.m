@@ -97,6 +97,12 @@
         [self getYValueMax:yAxisValues];
     }
 
+    if (_yMinValue) {
+        _yValueMin = _yMinValue;
+    } else {
+        [self getYValueMin:yAxisValues];
+    }
+
     if (_yLabelSum==4) {
         _yLabelSum = yAxisValues.count;
         (_yLabelSum % 2 == 0) ? _yLabelSum : _yLabelSum++;
