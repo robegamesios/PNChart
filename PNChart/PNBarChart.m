@@ -141,6 +141,18 @@
     [self updateBar];
 }
 
+- (void)getYValueMin:(NSArray *)yLabels
+{
+    CGFloat min = [[yLabels valueForKeyPath:@"@min.floatValue"] floatValue];
+    
+    //ensure min is even
+    _yValueMin = min ;
+    
+    if (_yValueMin == 0) {
+        _yValueMin = _yMinValue;
+    }
+}
+
 - (void)getYValueMax:(NSArray *)yLabels
 {
     CGFloat max = [[yLabels valueForKeyPath:@"@max.floatValue"] floatValue];
@@ -149,7 +161,7 @@
    _yValueMax = max ;
 
     if (_yValueMax == 0) {
-        _yValueMax = _yMinValue;
+        _yValueMax = _yMaxValue;
     }
 }
 

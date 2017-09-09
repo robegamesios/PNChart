@@ -32,6 +32,7 @@ typedef NSString *(^PNYLabelFormatter)(CGFloat yLabelValue);
 @property (nonatomic) NSMutableArray * bars;
 
 @property (nonatomic) CGFloat xLabelWidth;
+@property (nonatomic) float yValueMin;
 @property (nonatomic) float yValueMax;
 @property (nonatomic) UIColor *strokeColor;
 @property (nonatomic) NSArray *strokeColors;
